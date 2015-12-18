@@ -9,10 +9,12 @@ var inputPickData = {
         'title': 'title',
         'description': 'description',
         'folder_id': 'folder_id'
-    },
-    outputsPickResult = {
-        'user': 'user',
-        'bookmarks': 'bookmarks'
+    }, 
+    pickOutputs = {
+        'bookmark_id': 'bookmark_id',
+        'title': 'title',
+        'url': 'url',
+        'description': 'description'
     };
 
 module.exports = {
@@ -59,7 +61,7 @@ module.exports = {
 
         client.bookmarks.client.request('/bookmarks/add', util.pickStringInputs(step, inputPickData)).then(function (bookmarks) {
 
-            this.complete(util.pickResult({bookmarks: bookmarks}, outputsPickResult));
+            this.complete(util.pickResult(_.isArray(bookmarks)? _.first(bookmarks): bookmarks, pickOutputs));
         }.bind(this)).catch(function(err) {
 
             this.fail(err);
