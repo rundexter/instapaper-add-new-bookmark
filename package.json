@@ -1,13 +1,17 @@
 {
-  "name": "instapaper-add-new-bookmark",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "author": "Alexander",
-  "license": "ISC",
-  "private": true,
-  "dependencies": {
-    "instapaper": "^1.0.0",
-    "lodash": "^3.10.1"
-  }
+   "name": "instapaper-add-new-bookmark",
+   "version": "0.0.1",
+   "description": "Adds a new unread bookmark to the user's account",
+   "main": "index.js",
+   "author": "Run Dexter, Inc",
+   "license": "MIT",
+   "private": true,
+   "dependencies": {
+      "instapaper": "^1.0.0",
+      "lodash": "^3.10.1"
+   },
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/rundexter/instapaper-add-new-bookmark"
+   }
 }
